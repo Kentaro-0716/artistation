@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Girls Bar Seven</title>
+  <!-- Bootstrap 4.6.0 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <!-- fontawsome 6 -->
+  <script src="https://kit.fontawesome.com/42725f6c45.js" crossorigin="anonymous"></script>
+  <!-- ヤクハン -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="_assets/slick/slick.css">
+  <link rel="stylesheet" href="_assets/css/style.css">
+</head>
+
+<body>
+  <svg display="none">
+    <defs>
+      <!-- <style>
+        .cls-1 {
+          fill: #fff;
+        }
+      </style> -->
+      <symbol id="search-icon" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="12" />
+        <path class="cls-1"
+          d="M14.83,12.73a5,5,0,1,0-1.56,1.56l3.31,3.31L18.14,16Zm-1.95-.39a3.2,3.2,0,1,1,0-4.53A3.2,3.2,0,0,1,12.88,12.34Z" />
+      </symbol>
+    </defs>
+    <defs>
+      <symbol id="twitter-icon" viewBox="0 0 400 400">
+        <path
+          d="M200,0C89.54,0,0,89.54,0,200S89.54,400,200,400s200-89.54,200-200S310.46,0,200,0ZM300.45,162.08q.14,3.1.14,6.23c0,63.71-48.5,137.18-137.18,137.18A136.53,136.53,0,0,1,89.5,283.84a99.21,99.21,0,0,0,11.5.66,96.74,96.74,0,0,0,59.88-20.63,48.29,48.29,0,0,1-45-33.49,48.09,48.09,0,0,0,21.78-.83,48.24,48.24,0,0,1-38.69-47.26c0-.22,0-.42,0-.62a47.77,47.77,0,0,0,21.84,6,48.25,48.25,0,0,1-14.92-64.36,136.86,136.86,0,0,0,99.37,50.37,48.25,48.25,0,0,1,82.17-44A96.63,96.63,0,0,0,318,118a48.37,48.37,0,0,1-21.2,26.67,96.64,96.64,0,0,0,27.69-7.59A98.24,98.24,0,0,1,300.45,162.08Z" />
+      </symbol>
+    </defs>
+    <defs>
+      <!-- <style>
+        .cls-1 {
+          fill: #fff;
+        }
+      </style> -->
+      <symbol id="insta-icon" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="12" />
+        <path class="cls-1"
+          d="M12.23,6.25c1.77,0,2,0,2.67,0a3.52,3.52,0,0,1,1.24.23A2.11,2.11,0,0,1,16.9,7a2,2,0,0,1,.49.76A3.76,3.76,0,0,1,17.62,9c0,.7,0,.91,0,2.68s0,2,0,2.68a3.64,3.64,0,0,1-.23,1.23,2,2,0,0,1-.49.76,2.14,2.14,0,0,1-.76.5,3.78,3.78,0,0,1-1.24.23c-.69,0-.9,0-2.67,0s-2,0-2.68,0a3.64,3.64,0,0,1-1.23-.23,2.06,2.06,0,0,1-.76-.5,1.94,1.94,0,0,1-.5-.76,3.64,3.64,0,0,1-.23-1.23c0-.7,0-.91,0-2.68s0-2,0-2.68a3.76,3.76,0,0,1,.23-1.23A1.94,1.94,0,0,1,7.56,7a2,2,0,0,1,.76-.49,3.4,3.4,0,0,1,1.23-.23c.7,0,.91,0,2.68,0m0-1.2c-1.8,0-2,0-2.74,0a5.14,5.14,0,0,0-1.6.31,3.25,3.25,0,0,0-1.18.77A3.19,3.19,0,0,0,6,7.34,4.63,4.63,0,0,0,5.64,9c0,.71,0,.93,0,2.73s0,2,0,2.73A4.63,4.63,0,0,0,6,16a3.22,3.22,0,0,0,.76,1.18A3.36,3.36,0,0,0,7.89,18a4.86,4.86,0,0,0,1.6.31c.71,0,.94,0,2.74,0s2,0,2.73,0A4.93,4.93,0,0,0,16.57,18a3.41,3.41,0,0,0,1.17-.76A3.25,3.25,0,0,0,18.51,16a4.91,4.91,0,0,0,.3-1.61c0-.7,0-.93,0-2.73s0-2,0-2.73a4.91,4.91,0,0,0-.3-1.61,3.22,3.22,0,0,0-.77-1.17,3.3,3.3,0,0,0-1.17-.77A5.21,5.21,0,0,0,15,5.09c-.71,0-.93,0-2.73,0Z" />
+        <path class="cls-1"
+          d="M12.23,8.28a3.4,3.4,0,1,0,3.4,3.4A3.41,3.41,0,0,0,12.23,8.28Zm0,5.61a2.21,2.21,0,1,1,2.21-2.21A2.21,2.21,0,0,1,12.23,13.89Z" />
+        <circle class="cls-1" cx="15.76" cy="8.14" r="0.8" />
+      </symbol>
+    </defs>
+    <defs>
+      <symbol id="youtube-icon" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="12" />
+        <image width="362" height="287" transform="translate(2.61 4.45) scale(0.05 0.05)"
+          xlink:href="data:image/png;base64,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" />
+      </symbol>
+    </defs>
+    <defs>
+      <symbol id="cart-icon" viewBox="0 0 20.39 21.6">
+        <path
+          d="M20.13,4a1.12,1.12,0,0,0-.87-.41H4.61l-.5-1.72h0A2.17,2.17,0,0,0,2.47.4L.68,0A.57.57,0,0,0,0,.44a.56.56,0,0,0,.43.67l1.8.38A1.08,1.08,0,0,1,3,2.23L6.31,13.48l-.22.11a2.3,2.3,0,0,0-.82.85A2.39,2.39,0,0,0,5,15.52H5v.06H5a2.39,2.39,0,0,0,.18.85,2.29,2.29,0,0,0,.85,1,2.32,2.32,0,0,0,1.3.4H17.84a.56.56,0,0,0,0-1.12H7.31a1.2,1.2,0,0,1-.47-.1,1.18,1.18,0,0,1-.53-.43,1.14,1.14,0,0,1-.2-.65,1.15,1.15,0,0,1,.25-.73,1.13,1.13,0,0,1,.31-.26,1.35,1.35,0,0,1,.44-.17l10.58-1.72a1.71,1.71,0,0,0,1.38-1.33L20.36,5h0a1.64,1.64,0,0,0,0-.22A1.09,1.09,0,0,0,20.13,4ZM18,11.11a.58.58,0,0,1-.46.45L7.4,13.2,4.94,4.75H19.26Z" />
+        <path
+          d="M8.61,18.76a1.62,1.62,0,0,0-.87-.26,1.5,1.5,0,0,0-.6.12,1.56,1.56,0,0,0-.68.56,1.54,1.54,0,0,0-.27.87,1.5,1.5,0,0,0,.12.6,1.56,1.56,0,0,0,.56.68,1.54,1.54,0,0,0,.87.27,1.5,1.5,0,0,0,.6-.12A1.65,1.65,0,0,0,9,20.92a1.62,1.62,0,0,0,.26-.87,1.5,1.5,0,0,0-.12-.6A1.58,1.58,0,0,0,8.61,18.76Zm-.29,1.53a.7.7,0,0,1-.23.28.6.6,0,0,1-.35.1.61.61,0,0,1-.24,0,.7.7,0,0,1-.28-.23.6.6,0,0,1-.1-.35.61.61,0,0,1,0-.24.63.63,0,0,1,.23-.28A.61.61,0,0,1,8,19.47a.63.63,0,0,1,.28.23.61.61,0,0,1,.06.59Z" />
+        <path
+          d="M17.11,18.76a1.62,1.62,0,0,0-.87-.26,1.5,1.5,0,0,0-.6.12,1.56,1.56,0,0,0-.68.56,1.54,1.54,0,0,0-.27.87,1.69,1.69,0,0,0,.12.6,1.52,1.52,0,0,0,.57.68,1.49,1.49,0,0,0,.86.27,1.54,1.54,0,0,0,.61-.12,1.53,1.53,0,0,0,.94-1.43,1.5,1.5,0,0,0-.12-.6A1.58,1.58,0,0,0,17.11,18.76Zm-.29,1.53a.7.7,0,0,1-.23.28.6.6,0,0,1-.35.1.64.64,0,0,1-.24,0,.7.7,0,0,1-.28-.23.68.68,0,0,1-.1-.35.6.6,0,0,1,.05-.24.56.56,0,0,1,.22-.28.61.61,0,0,1,.35-.11.7.7,0,0,1,.25,0,.67.67,0,0,1,.27.23.61.61,0,0,1,.06.59Z" />
+      </symbol>
+    </defs>
+    <defs>
+      <style>
+        .cls-1 {
+          fill: #fff;
+        }
+      </style>
+      <symbol id="pc-cart-icon" viewBox="0 0 108.78 76.58">
+        <polygon class="cls-1" points="102.83 0 5.95 0 5.95 64.19 102.83 64.19 102.83 0 102.83 0" />
+        <path
+          d="M98.75,60a.25.25,0,0,1-.24.25H10.08c-.13,0,0-.11,0-.25V3.58c0-.13-.13-.24,0-.24H98.51a.24.24,0,0,1,.24.24Z" />
+        <path class="cls-1" d="M0,69.21a7.47,7.47,0,0,0,7.54,7.37h93.71a7.46,7.46,0,0,0,7.53-7.37" />
+        <path d="M63.18,72.59a1.23,1.23,0,0,1-1.24,1.21H46.85a1.23,1.23,0,0,1-1.24-1.21V71.45H63.18Z" />
+        <path class="cls-1"
+          d="M70.39,20.72A2.24,2.24,0,0,0,68.73,20H40.8l-.95-2.89h0a4,4,0,0,0-3.12-2.56l-3.42-.64a1.07,1.07,0,0,0-1.27.72,1,1,0,0,0,.82,1.13l3.42.65a1.94,1.94,0,0,1,1.52,1.24l6.24,19-.41.19a4,4,0,0,0-1.57,1.43,3.59,3.59,0,0,0-.55,1.82h0v.1h0a3.63,3.63,0,0,0,.35,1.43,4.16,4.16,0,0,0,1.6,1.73A4.9,4.9,0,0,0,46,44H66a1,1,0,1,0,0-1.9H46a2.44,2.44,0,0,1-.9-.16,2.28,2.28,0,0,1-1-.73,1.83,1.83,0,0,1-.39-1.09,1.88,1.88,0,0,1,.49-1.23,2.48,2.48,0,0,1,.59-.45,3,3,0,0,1,.83-.28l20.17-2.9A3.08,3.08,0,0,0,68.37,33L70.83,22.3h0a1.58,1.58,0,0,0,0-.38A1.78,1.78,0,0,0,70.39,20.72ZM66.27,32.65a1,1,0,0,1-.88.75L46.12,36.17,41.43,21.92h27.3Z" />
+        <path class="cls-1"
+          d="M48.42,45.55a3.23,3.23,0,0,0-1.65-.45,3.09,3.09,0,0,0-1.15.21,3,3,0,0,0-1.3.94,2.41,2.41,0,0,0-.5,1.46,2.35,2.35,0,0,0,.23,1,2.69,2.69,0,0,0,1.07,1.15,3.23,3.23,0,0,0,1.65.45,3.31,3.31,0,0,0,1.15-.21,3,3,0,0,0,1.3-.94,2.35,2.35,0,0,0,.5-1.47,2.2,2.2,0,0,0-.23-1A2.69,2.69,0,0,0,48.42,45.55Zm-.55,2.57a1.14,1.14,0,0,1-.43.47,1.35,1.35,0,0,1-1.13.1,1.17,1.17,0,0,1-.53-.39.94.94,0,0,1-.2-.59,1,1,0,0,1,.09-.41,1.08,1.08,0,0,1,.44-.46,1.3,1.3,0,0,1,.66-.18,1.34,1.34,0,0,1,.46.08,1.17,1.17,0,0,1,.53.39.93.93,0,0,1,.2.58A.91.91,0,0,1,47.87,48.12Z" />
+        <path class="cls-1"
+          d="M64.63,45.55A3.23,3.23,0,0,0,63,45.1a3.09,3.09,0,0,0-1.15.21,2.87,2.87,0,0,0-1.3.94A2.42,2.42,0,0,0,60,47.71a2.35,2.35,0,0,0,.23,1,2.75,2.75,0,0,0,1.07,1.15,3.27,3.27,0,0,0,1.66.45,3.4,3.4,0,0,0,1.15-.21,3,3,0,0,0,1.3-.94,2.48,2.48,0,0,0,.5-1.47,2.33,2.33,0,0,0-.23-1A2.75,2.75,0,0,0,64.63,45.55Zm-.56,2.57a1.14,1.14,0,0,1-.43.47,1.3,1.3,0,0,1-.66.18,1.45,1.45,0,0,1-.47-.08A1.2,1.2,0,0,1,62,48.3a.94.94,0,0,1-.2-.59,1,1,0,0,1,.09-.41,1.12,1.12,0,0,1,.43-.46,1.34,1.34,0,0,1,.67-.18,1.39,1.39,0,0,1,.46.08,1.14,1.14,0,0,1,.52.39.94.94,0,0,1,.21.58A.92.92,0,0,1,64.07,48.12Z" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <div id="container">
+
+    <!-- header -->
+    <header>
+      <div class="header">
+        <div class="header__inner inner">
+
+          <h1 class="header__logo">
+            <a href="">
+              <img src="_assets/img/common/logo.svg" alt="">
+            </a>
+          </h1>
+          <div class="header__vertical-letter">
+            <img src="_assets/img/common/header-vertical-letter.svg" alt="">
+          </div>
+          <div class="header__main header-main">
+            <div class="header-main__language">
+              <ul>
+                <li>日本語</li>
+                <li>English</li>
+              </ul>
+            </div>
+            <div class="header-main__language-sp">
+              <ul>
+                <li>JP</li>
+                <li>EN</li>
+              </ul>
+            </div>
+
+            <div class="header-main__nav pc">
+              <nav>
+                <ul>
+                  <li>
+                    <a href="">作家紹介</a>
+                  </li>
+                  <li>
+                    <a href="">工房アクセス</a>
+                  </li>
+                  <li>
+                    <a href="">運営会社</a>
+                  </li>
+                  <li>
+                    <a href="">ONLINE SHOP
+                      <svg viewBox="0 0 20.39 21.6" role="img" aria-label="">
+                        <use xlink:href="#cart-icon" />
+                      </svg></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="header__sns-nav header-sns pc">
+            <nav>
+              <ul>
+                <li>
+                  <a href="">
+                    <svg viewBox="0 0 24 24" role="img" aria-label="">
+                      <use xlink:href="#search-icon" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <svg viewBox="0 0 400 400" role="img" aria-label="">
+                      <use xlink:href="#twitter-icon" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <svg viewBox="0 0 24 24" role="img" aria-label="">
+                      <use xlink:href="#insta-icon" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <svg viewBox="0 0 24 24" role="img" aria-label="">
+                      <use xlink:href="#youtube-icon" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header__hb-btn hamburger-btn">
+            <div class="hamburger-btn__inner"><span></span><span></span><span></span></div>
+          </div>
+          <div class="header__sp-nav-list header-sp-nav">
+            <div class="header-main__nav header-sp-nav__main">
+              <nav>
+                <ul>
+                  <li>
+                    <a href="">作家紹介</a>
+                  </li>
+                  <li>
+                    <a href="">工房アクセス</a>
+                  </li>
+                  <li>
+                    <a href="">運営会社</a>
+                  </li>
+                  <li>
+                    <a href="">ONLINE SHOP<svg viewBox="0 0 20.39 21.6" role="img" aria-label="">
+                        <use xlink:href="#cart-icon" />
+                      </svg></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header__sns-nav header-sns header-sp-nav__main">
+              <nav>
+                <ul>
+                  <li>
+                    <a href="">
+                      <svg viewBox="0 0 24 24" role="img" aria-label="">
+                        <use xlink:href="#search-icon" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <svg viewBox="0 0 400 400" role="img" aria-label="">
+                        <use xlink:href="#twitter-icon" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <svg viewBox="0 0 24 24" role="img" aria-label="">
+                        <use xlink:href="#insta-icon" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <svg viewBox="0 0 24 24" role="img" aria-label="">
+                        <use xlink:href="#youtube-icon" />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  </header>
+  <div class="all-mask"></div>
+
+  <main>
+    <div class="main">
+      <div class="top-fv">
+        <ul class="top-fv__wrap">
+          <li>
+            <picture>
+              <source srcset="_assets/img/top/top-fv-slide-01-sp.jpg" media="(max-width: 767px)" />
+              <source srcset="_assets/img/top/top-fv-slide-01.jpg" media="(min-width: 768px)" />
+              <img src="_assets/img/top/top-fv-slide-01-sp.jpg" alt="">
+            </picture>
+          </li>
+          <li>
+            <img src="_assets/img/top/top-fv-slide-02.jpg" alt="">
+          </li>
+          <li>
+            <img src="_assets/img/top/top-fv-slide-03.jpg" alt="">
+          </li>
+        </ul>
+      </div>
+      <div class="top-fv-news">
+        <div class="top-fv-news__inner inner">
+          <div class="top-fv-news__contents top-fv-news-contents">
+            <div class="top-fv-news-contents__title">NEWS</div>
+            <div class="top-fv-news-contents__post top-fv-post">
+              <div class="top-fv-post__date">2022.00.00</div>
+              <a href="" class="top-fv-post__article">新着情報が入ります新着情報が入ります新着情報が入ります</a>
+            </div>
+            <a class="top-fv-news-contents__link">一覧<i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <section>
+        <div class="section top-sec01">
+          <div class="top-sec01__inner inner">
+            <div class="top-sec01__title">
+              <div class="top-sec-title">
+                <h2>CONCEPT</h2>
+                <span></span>
+              </div>
+            </div>
+            <div class="top-sec01__contents top-sec01-contens">
+              <div class="top-sec01-contens__text">
+                <img src="_assets/img/top/top-sec01-vertical-letter.svg" alt="">
+                <p>
+                  アーティステーションでは<br>九州各地で活躍されているアーティストを<br>オンラインでご紹介する<br>独自のコンテンツを展開しています。<br>お気に入りの作品やアーティストを見つけに<br>さあ出かけましょう。
+                </p>
+              </div>
+              <div class="top-sec01-contens__image">
+                <img src="_assets/img/top/top-sec01-map.png" alt="">
+              </div>
+            </div>
+            <div class="top-sec01__button">
+              <a href="" class="top-common-button">
+                <span>詳しく</span>
+                <span><i class="fas fa-chevron-right"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section top-sec02">
+          <div class="top-sec02__inner inner">
+            <div class="top-sec02__title">
+              <div class="top-sec-title">
+                <h2>ARTISTS</h2>
+                <span></span>
+              </div>
+            </div>
+            <div class="top-sec02__contents">
+              <div class="top-sec02-item">
+                <div class="top-sec02-item__image">
+                  <img src="_assets/img/top/top-sec02-img01.png" alt="">
+                </div>
+                <div class="top-sec02-item__text top-sec02-item-text">
+                  <div class="top-sec02-item-text__genre">三川内焼</div>
+                  <div class="top-sec02-item-text__name"><span class="small-span">【五光窯】</span>藤本江里子</div>
+                </div>
+                <div class="top-sec02-item__button">
+                  <a href="" class="top-common-button">
+                    <span>作家について</span>
+                    <span><i class="fas fa-chevron-right"></i></span>
+                  </a>
+                  <a href="" class="top-common-button">
+                    <span>作品のご購入</span>
+                    <span><i class="fas fa-chevron-right"></i></span>
+                  </a>
+                </div>
+              </div>
+              <div class="top-sec02-item">
+                <div class="top-sec02-item__image">
+                  <img src="_assets/img/top/top-sec02-img02.png" alt="">
+                </div>
+                <div class="top-sec02-item__text top-sec02-item-text">
+                  <div class="top-sec02-item-text__genre">ガラス工芸</div>
+                  <div class="top-sec02-item-text__name"><span class="small-span">【arte labo】</span>田中英樹</div>
+                </div>
+                <div class="top-sec02-item__button">
+                  <a href="" class="top-common-button">
+                    <span>作家について</span>
+                    <span><i class="fas fa-chevron-right"></i></span>
+                  </a>
+                  <a href="" class="top-common-button">
+                    <span>作品のご購入</span>
+                    <span><i class="fas fa-chevron-right"></i></span>
+                  </a>
+                </div>
+              </div>
+              <div class="top-sec02-item">
+                <div class="top-sec02-item__image">
+                  <img src="_assets/img/top/top-sec02-img03.png" alt="">
+                </div>
+                <div class="top-sec02-item__text top-sec02-item-text">
+                  <div class="top-sec02-item-text__genre">革製品</div>
+                  <div class="top-sec02-item-text__name"><span class="small-span">【cokeco】</span>田中立樹・田中知絵</div>
+                </div>
+                <div class="top-sec02-item__button">
+                  <a href="" class="top-common-button">
+                    <span>作家について</span>
+                    <span><i class="fas fa-chevron-right"></i></span>
+                  </a>
+                  <a href="" class="top-common-button">
+                    <span>作品のご購入</span>
+                    <span><i class="fas fa-chevron-right"></i></span>
+                  </a>
+                </div>
+              </div>
+              <div class="top-sec02-item">
+                <div class="top-sec02-item__image">
+                  <img src="_assets/img/top/top-sec02-img04.png" alt="">
+                </div>
+                <div class="top-sec02-item__text top-sec02-item-text">
+                  <div class="top-sec02-item-text__genre">肥後象嵌</div>
+                  <div class="top-sec02-item-text__name"><span class="small-span">【Standing Straight Studio】</span>麻生翼
+                  </div>
+                </div>
+                <div class="top-sec02-item__button">
+                  <a href="" class="top-common-button">
+                    <span>作家について</span>
+                    <span><i class="fas fa-chevron-right"></i></span>
+                  </a>
+                  <a href="" class="top-common-button">
+                    <span>作品のご購入</span>
+                    <span><i class="fas fa-chevron-right"></i></span>
+                  </a>
+                </div>
+              </div>
+              <div class="top-sec02-item">
+                <div class="top-sec02-item__image">
+                  <img src="_assets/img/top/top-sec02-img05.png" alt="">
+                </div>
+                <div class="top-sec02-item__text top-sec02-item-text">
+                  <div class="top-sec02-item-text__genre">木工</div>
+                  <div class="top-sec02-item-text__name"><span class="small-span">【児玉工芸】</span>児玉喜輝</div>
+                </div>
+                <div class="top-sec02-item__button">
+                  <a href="" class="top-common-button">
+                    <span>作家について</span>
+                    <span><i class="fas fa-chevron-right"></i></span>
+                  </a>
+                  <a href="" class="top-common-button">
+                    <span>作品のご購入</span>
+                    <span><i class="fas fa-chevron-right"></i></span>
+                  </a>
+                </div>
+              </div>
+              <div class="top-sec02-item">
+                <div class="top-sec02-item__image">
+                  <img src="_assets/img/top/top-sec02-img06.png" alt="">
+                </div>
+                <div class="top-sec02-item__text top-sec02-item-text">
+                  <div class="top-sec02-item-text__genre">木工</div>
+                  <div class="top-sec02-item-text__name"><span class="small-span">【杉の木クラフト】</span>溝口伸弥</div>
+                </div>
+                <div class="top-sec02-item__button">
+                  <a href="" class="top-common-button">
+                    <span>作家について</span>
+                    <span><i class="fas fa-chevron-right"></i></span>
+                  </a>
+                  <a href="" class="top-common-button">
+                    <span>作品のご購入</span>
+                    <span><i class="fas fa-chevron-right"></i></span>
+                  </a>
+                </div>
+              </div>
+              <div class="top-sec02-item">
+                <div class="top-sec02-item__image">
+                  <img src="_assets/img/top/top-sec02-img07.png" alt="">
+                </div>
+                <div class="top-sec02-item__text top-sec02-item-text">
+                  <div class="top-sec02-item-text__genre">陶器</div>
+                  <div class="top-sec02-item-text__name"><span class="small-span">【うつわつなぎ】</span>松下広樹</div>
+                </div>
+                <div class="top-sec02-item__button">
+                  <a href="" class="top-common-button">
+                    <span>作家について</span>
+                    <span><i class="fas fa-chevron-right"></i></span>
+                  </a>
+                  <a href="" class="top-common-button">
+                    <span>作品のご購入</span>
+                    <span><i class="fas fa-chevron-right"></i></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section top-sec03">
+          <div class="top-sec03__bg"></div>
+          <div class="top-sec03__inner">
+            <div class="top-sec03__title">
+              <div class="top-sec-title">
+                <h2>PICK UP</h2>
+                <span></span>
+              </div>
+            </div>
+            <div class="top-sec03__contents top-sec03-contents">
+              <ul class="top-sec03-contents__slider-wrap">
+
+                <li class="top-sec03-contents-item" data-id="1">
+                  <div class="top-sec03-contents-item__image">
+                    <img src="_assets/img/top/top-sec03-img-01.jpg" alt="">
+                  </div>
+                  <div class="top-sec03-contents-item__content top-sec03-item-content">
+                    <div class="top-sec03-item-content__text">
+                      <div class="top-sec03-item-content__text--art-name">【arte labo】</div>
+                      <div class="top-sec03-item-content__text--author-name">田中英樹</div>
+                    </div>
+                    <div class="top-sec03-item-content__button">
+                      <button><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
+                </li>
+                <li class="top-sec03-contents-item" data-id="2">
+                  <div class="top-sec03-contents-item__image">
+                    <img src="_assets/img/top/top-sec03-img-02.jpg" alt="">
+                  </div>
+                  <div class="top-sec03-contents-item__content top-sec03-item-content">
+                    <div class="top-sec03-item-content__text">
+                      <div class="top-sec03-item-content__text--art-name">【cokeco】</div>
+                      <div class="top-sec03-item-content__text--author-name">田中立樹・田中知絵</div>
+                    </div>
+                    <div class="top-sec03-item-content__button">
+                      <button><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
+                </li>
+                <li class="top-sec03-contents-item" data-id="3">
+                  <div class="top-sec03-contents-item__image">
+                    <img src="_assets/img/top/top-sec03-img-03.jpg" alt="">
+                  </div>
+                  <div class="top-sec03-contents-item__content top-sec03-item-content">
+                    <div class="top-sec03-item-content__text">
+                      <div class="top-sec03-item-content__text--art-name">【五光窯】</div>
+                      <div class="top-sec03-item-content__text--author-name">藤本江里子</div>
+                    </div>
+                    <div class="top-sec03-item-content__button">
+                      <button><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
+                </li>
+                <li class="top-sec03-contents-item" data-id="4">
+                  <div class="top-sec03-contents-item__image">
+                    <img src="_assets/img/top/top-sec03-img-04.jpg" alt="">
+                  </div>
+                  <div class="top-sec03-contents-item__content top-sec03-item-content">
+                    <div class="top-sec03-item-content__text">
+                      <div class="top-sec03-item-content__text--art-name">【Standing Straight Studio】</div>
+                      <div class="top-sec03-item-content__text--author-name">麻生翼</div>
+                    </div>
+                    <div class="top-sec03-item-content__button">
+                      <button><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
+                <li class="top-sec03-contents-item" data-id="5">
+                  <div class="top-sec03-contents-item__image">
+                    <img src="_assets/img/top/top-sec03-img-05.jpg" alt="">
+                  </div>
+                  <div class="top-sec03-contents-item__content top-sec03-item-content">
+                    <div class="top-sec03-item-content__text">
+                      <div class="top-sec03-item-content__text--art-name">【児玉工芸】</div>
+                      <div class="top-sec03-item-content__text--author-name">児玉喜輝</div>
+                    </div>
+                    <div class="top-sec03-item-content__button">
+                      <button><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- モーダルの内容 -->
+            <div class="top-sec03__modal-bg"></div>
+
+            <div class="top-sec03-modal-item" id="modal_1">
+              <button class="modal-close"><i class="fas fa-times"></i></button>
+              <div class="top-sec03-modal-item__tabs">
+                <ul>
+                  <li>
+                    <a href="#tab01" class="current">静止画</a>
+                  </li>
+                  <li>
+                    <a href="#tab02">360度ビューで見る</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="top-sec03-modal-item__content">
+                <div id="tab01" class="top-sec03-tab-item">
+                  <ul class="top-sec03-tab-item__slide-wrap slide-wrap-modal_1">
+                    <li class="top-sec03-tab-item__slide">
+                      <img src="_assets/img/top/top-sec03-img-01.jpg" alt="">
+                    </li>
+                    <li class="top-sec03-tab-item__slide">
+                      <img src="_assets/img/top/top-sec03-tab-slide-sample-01.jpg" alt="">
+                    </li>
+                    <li class="top-sec03-tab-item__slide">
+                      <img src="_assets/img/top/top-sec03-tab-slide-sample-02.jpg" alt="">
+                    </li>
+                  </ul>
+                </div>
+                <div id="tab02" class="top-sec03-tab-item top-sec03-tab-item02">
+                  <iframe src="https://artistation.jp/360photo/gokougama/002/"></iframe>
+                  <!-- <img src="_assets/img/top/top-sec03-img-01.jpg" alt=""> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="top-sec03-modal-item" id="modal_2">
+              <button class="modal-close"><i class="fas fa-times"></i></button>
+              <div class="top-sec03-modal-item__tabs">
+                <ul>
+                  <li>
+                    <a href="#tab03" class="current">静止画</a>
+                  </li>
+                  <li>
+                    <a href="#tab04">360度ビューで見る</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="top-sec03-modal-item__content">
+                <div id="tab03" class="top-sec03-tab-item">
+                  <ul class="top-sec03-tab-item__slide-wrap slide-wrap-modal_2">
+                    <li class="top-sec03-tab-item__slide">
+                      <img src="_assets/img/top/top-sec03-img-02.jpg" alt="">
+                    </li>
+                    <li class="top-sec03-tab-item__slide">
+                      <img src="_assets/img/top/top-sec03-tab-slide-sample-01.jpg" alt="">
+                    </li>
+                    <li class="top-sec03-tab-item__slide">
+                      <img src="_assets/img/top/top-sec03-tab-slide-sample-02.jpg" alt="">
+                    </li>
+                  </ul>
+                </div>
+                <div id="tab04" class="top-sec03-tab-item top-sec03-tab-item02">
+                  <img src="_assets/img/top/top-sec03-img-02.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="top-sec03-modal-item" id="modal_3">
+              <button class="modal-close"><i class="fas fa-times"></i></button>
+              <div class="top-sec03-modal-item__tabs">
+                <ul>
+                  <li>
+                    <a href="#tab05" class="current">静止画</a>
+                  </li>
+                  <li>
+                    <a href="#tab06">360度ビューで見る</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="top-sec03-modal-item__content">
+                <div id="tab05" class="top-sec03-tab-item">
+                  <ul class="top-sec03-tab-item__slide-wrap slide-wrap-modal_3">
+                    <li class="top-sec03-tab-item__slide">
+                      <img src="_assets/img/top/top-sec03-img-03.jpg" alt="">
+                    </li>
+                    <li class="top-sec03-tab-item__slide">
+                      <img src="_assets/img/top/top-sec03-tab-slide-sample-01.jpg" alt="">
+                    </li>
+                    <li class="top-sec03-tab-item__slide">
+                      <img src="_assets/img/top/top-sec03-tab-slide-sample-02.jpg" alt="">
+                    </li>
+                  </ul>
+                </div>
+                <div id="tab06" class="top-sec03-tab-item top-sec03-tab-item02">
+                  <img src="_assets/img/top/top-sec03-img-03.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="top-sec03-modal-item" id="modal_4">
+              <button class="modal-close"><i class="fas fa-times"></i></button>
+              <div class="top-sec03-modal-item__tabs">
+                <ul>
+                  <li>
+                    <a href="#tab07" class="current">静止画</a>
+                  </li>
+                  <li>
+                    <a href="#tab08">360度ビューで見る</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="top-sec03-modal-item__content">
+                <div id="tab07" class="top-sec03-tab-item">
+                  <ul class="top-sec03-tab-item__slide-wrap slide-wrap-modal_4">
+                    <li class="top-sec03-tab-item__slide">
+                      <img src="_assets/img/top/top-sec03-img-04.jpg" alt="">
+                    </li>
+                    <li class="top-sec03-tab-item__slide">
+                      <img src="_assets/img/top/top-sec03-tab-slide-sample-01.jpg" alt="">
+                    </li>
+                    <li class="top-sec03-tab-item__slide">
+                      <img src="_assets/img/top/top-sec03-tab-slide-sample-02.jpg" alt="">
+                    </li>
+                  </ul>
+                </div>
+                <div id="tab08" class="top-sec03-tab-item top-sec03-tab-item02">
+                  <img src="_assets/img/top/top-sec03-img-04.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="top-sec03-modal-item" id="modal_5">
+              <button class="modal-close"><i class="fas fa-times"></i></button>
+              <div class="top-sec03-modal-item__tabs">
+                <ul>
+                  <li>
+                    <a href="#tab09" class="current">静止画</a>
+                  </li>
+                  <li>
+                    <a href="#tab10">360度ビューで見る</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="top-sec03-modal-item__content">
+                <div id="tab09" class="top-sec03-tab-item">
+                  <ul class="top-sec03-tab-item__slide-wrap slide-wrap-modal_5">
+                    <li class="top-sec03-tab-item__slide">
+                      <img src="_assets/img/top/top-sec03-img-05.jpg" alt="">
+                    </li>
+                    <li class="top-sec03-tab-item__slide">
+                      <img src="_assets/img/top/top-sec03-tab-slide-sample-01.jpg" alt="">
+                    </li>
+                    <li class="top-sec03-tab-item__slide">
+                      <img src="_assets/img/top/top-sec03-tab-slide-sample-02.jpg" alt="">
+                    </li>
+                  </ul>
+                </div>
+                <div id="tab10" class="top-sec03-tab-item top-sec03-tab-item02">
+                  <img src="_assets/img/top/top-sec03-img-05.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- モーダルの内容 -->
+      <!-- <div class="top-sec03__modal-bg"></div>
+      <div class="top-sec03-modal-item" id="modal_1">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <div class="top-sec03-modal-item__content">
+          <img src="_assets/img/top/top-sec03-img-01.jpg" alt="">
+        </div>
+      </div>
+      <div class="top-sec03-modal-item" id="modal_2">
+        <div class="top-sec03-modal-item__content">
+          <img src="_assets/img/top/top-sec03-img-02.jpg" alt="">
+        </div>
+      </div>
+      <div class="top-sec03-modal-item" id="modal_3">
+        <div class="top-sec03-modal-item__content">
+          <img src="_assets/img/top/top-sec03-img-03.jpg" alt="">
+        </div>
+      </div>
+      <div class="top-sec03-modal-item" id="modal_4">
+        <div class="top-sec03-modal-item__content">
+          <img src="_assets/img/top/top-sec03-img-04.jpg" alt="">
+        </div>
+      </div>
+      <div class="top-sec03-modal-item" id="modal_5">
+        <div class="top-sec03-modal-item__content">
+          <img src="_assets/img/top/top-sec03-img-05.jpg" alt="">
+        </div>
+      </div> -->
+
+      <section>
+        <div class="section top-sec04">
+          <div class="top-sec04__contents top-sec04-contents">
+            <a href="" class="top-sec04-item">
+              <div class="top-sec04-item__title">
+                <h2>
+                  <span>artistation itoshimaのご案内</span>
+                  <i class="fas fa-chevron-right"></i>
+                </h2>
+              </div>
+            </a>
+            <a href="" class="top-sec04-item">
+              <div class="top-sec04-item__icon">
+                <svg viewBox="0 0 108.78 76.58" role="img" aria-label="">
+                  <use xlink:href="#pc-cart-icon" />
+                </svg>
+              </div>
+              <div class="top-sec04-item__title">
+                <h2>
+                  <span>ONLINE SHOP</span>
+                  <i class="fas fa-chevron-right"></i>
+                </h2>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section top-sec05">
+          <div class="top-sec05__inner inner">
+            <div class="top-sec05__title">
+              <div class="top-sec-title">
+                <h2>STAFF POST</h2>
+                <span></span>
+              </div>
+            </div>
+            <div class="top-sec05__contents top-sec05-contents">
+              <div class="top-sec05-contents__items">
+
+                <a href="" class="top-sec05-item">
+                  <div class="top-sec05-item__category">ニュース</div>
+                  <div class="top-sec05-item__image">
+                    <img src="_assets/img/top/top-sec05-img-01.jpg" alt="">
+                  </div>
+                  <div class="top-sec05-item__content">
+                    <div class="top-sec05-item__content--date">2022/00/00</div>
+                    <div class="top-sec05-item__content--title">杉の木クラフトさんの”お弁当箱”をECに掲載しております。</div>
+                  </div>
+                </a>
+                <a href="" class="top-sec05-item">
+                  <div class="top-sec05-item__category">ニュース</div>
+                  <div class="top-sec05-item__image">
+                    <img src="_assets/img/top/top-sec05-img-02.jpg" alt="">
+                  </div>
+                  <div class="top-sec05-item__content">
+                    <div class="top-sec05-item__content--date">2022/00/00</div>
+                    <div class="top-sec05-item__content--title">杉の木クラフトさんの”お弁当箱”をECに掲載しております。</div>
+                  </div>
+                </a>
+                <a href="" class="top-sec05-item">
+                  <div class="top-sec05-item__category">ニュース</div>
+                  <div class="top-sec05-item__image">
+                    <img src="_assets/img/top/top-sec05-img-03.jpg" alt="">
+                  </div>
+                  <div class="top-sec05-item__content">
+                    <div class="top-sec05-item__content--date">2022/00/00</div>
+                    <div class="top-sec05-item__content--title">杉の木クラフトさんの”お弁当箱”をECに掲載しております。</div>
+                  </div>
+                </a>
+                <a href="" class="top-sec05-item">
+                  <div class="top-sec05-item__category">ニュース</div>
+                  <div class="top-sec05-item__image">
+                    <img src="_assets/img/top/top-sec05-img-04.jpg" alt="">
+                  </div>
+                  <div class="top-sec05-item__content">
+                    <div class="top-sec05-item__content--date">2022/00/00</div>
+                    <div class="top-sec05-item__content--title">杉の木クラフトさんの”お弁当箱”をECに掲載しております。</div>
+                  </div>
+                </a>
+              </div>
+              <div class="top-sec05-contents__button">
+                <a href="" class="top-common-button">
+                  <span>一覧</span>
+                  <span><i class="fas fa-chevron-right"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="footer-image"></div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <div class="footer__inner">
+        <div class="footer__contents footer-contents">
+
+          <div class="footer-contents__main footer-contents-main">
+            <div class="footer-contents-main__contact footer-contact">
+              <div class="footer-contact__tel">
+                <div class="footer-contact__tel--number">
+                  <img src="_assets/img/top/tel-icon.svg" alt="">
+                  <span>092-895-5337</span>
+                </div>
+                <div class="footer-contact__tel--time">受付／9:00～18:00 (平日のみ)</div>
+              </div>
+              <div class="footer-contact__button">
+                <a href="" class="top-common-button">
+                  <span>お問合せ</span>
+                  <span><i class="fas fa-chevron-right"></i></span>
+                </a>
+              </div>
+            </div>
+            <div class="footer-contents-main__nav footer-nav">
+              <div class="footer-nav__list">
+                <nav>
+                  <ul>
+                    <li>
+                      <a href="">作家紹介</a>
+                    </li>
+                    <li>
+                      <a href="">工房アクセス</a>
+                    </li>
+                    <li>
+                      <a href="">作家紹介</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="footer-nav__link footer-nav-link">
+                <div class="footer-nav-link__online-shop">
+                  <a href="">ONLINE SHOP
+                    <svg viewBox="0 0 20.39 21.6" role="img" aria-label="">
+                      <use xlink:href="#cart-icon" />
+                    </svg>
+                  </a>
+                </div>
+                <div class="footer-nav-link__sns">
+                  <nav>
+                    <ul>
+                      <li>
+                        <a href="">
+                          <img src="_assets/img/top/twitter-icon-f.svg" alt="">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="_assets/img/top/instagram-icon-f.svg" alt="">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="_assets/img/top/youtube-icon-f.svg" alt="">
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="footer-contents__vertical-letter">
+            <img src="_assets/img/common/header-vertical-letter.svg" alt="">
+          </div>
+
+          <div class="footer-contents__logo">
+            <a href="">
+              <img src="_assets/img/common/logo.svg" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="footer__copy-light">© 2022 artistation Inc.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- トップに戻るボタン -->
+  <div id="page_top"><a href="#"></a></div>
+
+  </div><!-- #container -->
+
+  <script src="_assets/js/lib/jquery.min.js"></script>
+  <script src="_assets/slick/slick.min.js"></script>
+  <script src="_assets/js/common.js"></script>
+</body>
+
+</html>
